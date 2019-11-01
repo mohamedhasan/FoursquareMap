@@ -25,7 +25,7 @@ protocol RequestProtocol:NSObject {
 }
 
 class BaseRequest:NSObject,RequestProtocol {
-    var baseURL:String
+    internal var baseURL:String
     var headers: [String : String]?
     var paramters: [String : Any]?
     var path: RequestPathProtocol
