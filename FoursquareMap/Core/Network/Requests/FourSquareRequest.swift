@@ -29,9 +29,7 @@ enum FourSquareRequestPath:RequestPathProtocol {
 
 class FourSquareRequest: BaseRequest {
     
-    
-    override init(path:FourSquareRequestPath,paramters:[String:Any]?) {
-        
+    required init(path:FourSquareRequestPath,paramters:[String:Any]?) {
         super.init(path: path, paramters: paramters)
         self.baseURL = "https://api.foursquare.com/v2"
         self.headers = ["Content-Type" : "application/json"]
