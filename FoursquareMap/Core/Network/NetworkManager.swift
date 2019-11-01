@@ -31,11 +31,12 @@ class NetworkManager: NSObject {
         let headers = request.headers
         let paramters = request.paramters
         let httpMethod = request.path.method
+        let encoding = (httpMethod == .get) ? URLEncoding(destination: .queryString) as ParameterEncoding : JSONEncoding.prettyPrinted as ParameterEncoding
         
         Alamofire.request(url
             , method: httpMethod
             , parameters: paramters
-            , encoding: JSONEncoding.default
+            , encoding: encoding
             , headers: headers).validate().responseJSON { (response) -> Void in
                 
                 guard response.result.isSuccess else {

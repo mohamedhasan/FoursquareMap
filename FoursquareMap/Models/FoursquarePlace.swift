@@ -28,8 +28,18 @@ struct FoursquareObj: Codable {
     let venues:[FoursquarePlace]!
 }
 
-struct FoursquareResponse: Codable {
+struct FoursquareMeta: Codable {
+    let code:Int
+    let requestId:String
+}
+
+class FoursquareResponse: NSObject, ResponseProtocol {
     let response:FoursquareObj!
+    let meta:FoursquareMeta?
+    
+    var data: [Place] { get {return self.response?.venues ?? [Place]()}}
+    var error: String? {get {nil}}
+    var isSuccess: Bool {get {return self.meta?.code == 200}}
 }
 
 struct FoursquarePlace: Codable {
@@ -39,7 +49,7 @@ struct FoursquarePlace: Codable {
     let location:FoursquarePlaceLocation!
 }
 
-extension FoursquarePlace:PlaceProtocol {
+extension FoursquarePlace:Place {
     var title: String { get {return self.name}}
     var address: String  { get {return self.name}}
     var lat: Double  { get {return self.location.lat}}
