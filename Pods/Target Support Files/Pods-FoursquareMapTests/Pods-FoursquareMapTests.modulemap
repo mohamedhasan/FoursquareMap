@@ -1,0 +1,6 @@
+framework module Pods_FoursquareMapTests {
+  umbrella header "Pods-FoursquareMapTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
