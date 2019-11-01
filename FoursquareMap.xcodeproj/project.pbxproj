@@ -15,6 +15,12 @@
 		5C2CF418236C42C200E7B0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */; };
 		5C2CF423236C42C200E7B0CC /* FoursquareMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF422236C42C200E7B0CC /* FoursquareMapTests.swift */; };
 		5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF42D236C42C200E7B0CC /* FoursquareMapUITests.swift */; };
+		5C2CF444236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF443236C6B2F00E7B0CC /* RequestProtocol.swift */; };
+		5C2CF445236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF443236C6B2F00E7B0CC /* RequestProtocol.swift */; };
+		5C2CF446236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF443236C6B2F00E7B0CC /* RequestProtocol.swift */; };
+		5C2CF448236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF447236C6BDD00E7B0CC /* FourSquareRequest.swift */; };
+		5C2CF449236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF447236C6BDD00E7B0CC /* FourSquareRequest.swift */; };
+		5C2CF44A236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF447236C6BDD00E7B0CC /* FourSquareRequest.swift */; };
 		8BA8AACD680435E5064ACCAE /* Pods_FoursquareMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */; };
 		DFEC927BED654AB3E6FBE104 /* Pods_FoursquareMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */; };
 		F8EDBCBC52ABED03D191A061 /* Pods_FoursquareMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC3B2E10E8B2AD0324BCC2 /* Pods_FoursquareMap.framework */; };
@@ -55,6 +61,8 @@
 		5C2CF429236C42C200E7B0CC /* FoursquareMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2CF42D236C42C200E7B0CC /* FoursquareMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareMapUITests.swift; sourceTree = "<group>"; };
 		5C2CF42F236C42C200E7B0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2CF443236C6B2F00E7B0CC /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		5C2CF447236C6BDD00E7B0CC /* FourSquareRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareRequest.swift; sourceTree = "<group>"; };
 		692B2EACE5CF8210E888FE64 /* Pods-FoursquareMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareMapTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquareMapTests/Pods-FoursquareMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +191,7 @@
 		5C2CF43C236C5A5600E7B0CC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5C2CF442236C6B1400E7B0CC /* Network */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -214,6 +223,23 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5C2CF442236C6B1400E7B0CC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF44B236C776F00E7B0CC /* Requests */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5C2CF44B236C776F00E7B0CC /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF443236C6B2F00E7B0CC /* RequestProtocol.swift */,
+				5C2CF447236C6BDD00E7B0CC /* FourSquareRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +466,8 @@
 				5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */,
 				5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */,
 				5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */,
+				5C2CF448236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
+				5C2CF444236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +475,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2CF449236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF423236C42C200E7B0CC /* FoursquareMapTests.swift in Sources */,
+				5C2CF445236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +485,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2CF44A236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */,
+				5C2CF446236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
