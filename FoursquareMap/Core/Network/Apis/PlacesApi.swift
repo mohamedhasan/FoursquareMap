@@ -12,16 +12,16 @@ enum PlacesSource {
 
     case foursquare
 
-    var requestType: BaseRequest.Type {
-    switch self {
-    case .foursquare:
-        return FourSquareRequest.self
-        /**
-         TO DO ......
-         Add sources as wanted .googlePlaces, .herePlaces ...... etc
-         */
-        }
-    }
+    /**
+    TO DO ......
+    Add Generic request creations for multiple Sources : googlePlaces, herePlaces ...... etc
+    */
+//    var requestType: BaseRequest.Type {
+//    switch self {
+//    case .foursquare:
+//        return FourSquareRequest.self
+//        }
+//    }
     
 }
     
