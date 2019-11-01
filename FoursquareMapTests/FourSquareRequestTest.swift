@@ -1,19 +1,19 @@
 //
-//  SixtRequestTest.swift
-//  SixtCarsTests
+//  FourSquareRequestTest.swift
+//  FourSquareRequestTest
 //
-//  Created by Mohamed Hassan on 10/6/19.
+//  Created by Mohamed Hassan on 11/2/19.
 //  Copyright © 2019 Mohamed Hassan. All rights reserved.
 //
 
 import XCTest
 
-class SixtRequestTest: XCTestCase {
+class FourSquareRequestTest: XCTestCase {
 
-    var request:SixtRequest?
+    var request:FourSquareRequest?
     
     override func setUp() {
-        request = SixtRequest(paramters: nil)
+        request = FourSquareRequest.searchLocationRequest(lat: 33.33, lng: 22.22, query: "query")
     }
 
     func testRequestCreation() {
@@ -21,16 +21,29 @@ class SixtRequestTest: XCTestCase {
     }
     
     func testRequestHasUrl() {
-        XCTAssertNotNil(request?.url)
+        XCTAssertNotNil(request?.requestUrl())
     }
     
-    func testRequestHasApiKey() {
-        request = SixtRequest(paramters: ["key":"value"])
-        XCTAssertNotNil(request?.paramters?["key"])
+    func testRequestHasProperAuth() {
+        XCTAssertNotNil(request?.paramters?["client_id"])
+        XCTAssertNotNil(request?.paramters?["client_secret"])
+        XCTAssertNotNil(request?.paramters?["v"])
     }
     
-    func testRequestIsHttpGet() {
-        XCTAssertEqual(request?.method, .get)
+    func testRequestLatLongCreated() {
+        XCTAssertNotNil(request?.paramters?["ll"])
+    }
+    
+    func testRequestLatLongCorrect() {
+        XCTAssertEqual(request?.paramters?["ll"] as? String, "33.33,22.22")
+    }
+    
+    func testRequestContentType() {
+        XCTAssertEqual(request?.headers?["Content-Type"], "application/json")
+    }
+    
+    func testSearchRequestIsHttpGet() {
+        XCTAssertEqual(request?.path.method, .get)
     }
 
 }
