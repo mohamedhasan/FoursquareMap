@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40B236C42C100E7B0CC /* AppDelegate.swift */; };
+		5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40D236C42C100E7B0CC /* SceneDelegate.swift */; };
+		5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40F236C42C100E7B0CC /* ViewController.swift */; };
+		5C2CF413236C42C100E7B0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF411236C42C100E7B0CC /* Main.storyboard */; };
+		5C2CF415236C42C200E7B0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF414236C42C200E7B0CC /* Assets.xcassets */; };
+		5C2CF418236C42C200E7B0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */; };
+		5C2CF423236C42C200E7B0CC /* FoursquareMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF422236C42C200E7B0CC /* FoursquareMapTests.swift */; };
+		5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF42D236C42C200E7B0CC /* FoursquareMapUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C2CF41F236C42C200E7B0CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C2CF400236C42C100E7B0CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C2CF407236C42C100E7B0CC;
+			remoteInfo = FoursquareMap;
+		};
+		5C2CF42A236C42C200E7B0CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C2CF400236C42C100E7B0CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C2CF407236C42C100E7B0CC;
+			remoteInfo = FoursquareMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C2CF408236C42C100E7B0CC /* FoursquareMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2CF40B236C42C100E7B0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5C2CF40D236C42C100E7B0CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5C2CF40F236C42C100E7B0CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C2CF412236C42C100E7B0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C2CF414236C42C200E7B0CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C2CF417236C42C200E7B0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C2CF419236C42C200E7B0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2CF41E236C42C200E7B0CC /* FoursquareMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2CF422236C42C200E7B0CC /* FoursquareMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareMapTests.swift; sourceTree = "<group>"; };
+		5C2CF424236C42C200E7B0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2CF429236C42C200E7B0CC /* FoursquareMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2CF42D236C42C200E7B0CC /* FoursquareMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareMapUITests.swift; sourceTree = "<group>"; };
+		5C2CF42F236C42C200E7B0CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C2CF405236C42C100E7B0CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF41B236C42C200E7B0CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF426236C42C200E7B0CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C2CF3FF236C42C100E7B0CC = {
+			isa = PBXGroup;
+			children = (
+				5C2CF40A236C42C100E7B0CC /* FoursquareMap */,
+				5C2CF421236C42C200E7B0CC /* FoursquareMapTests */,
+				5C2CF42C236C42C200E7B0CC /* FoursquareMapUITests */,
+				5C2CF409236C42C100E7B0CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C2CF409236C42C100E7B0CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF408236C42C100E7B0CC /* FoursquareMap.app */,
+				5C2CF41E236C42C200E7B0CC /* FoursquareMapTests.xctest */,
+				5C2CF429236C42C200E7B0CC /* FoursquareMapUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C2CF40A236C42C100E7B0CC /* FoursquareMap */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF40B236C42C100E7B0CC /* AppDelegate.swift */,
+				5C2CF40D236C42C100E7B0CC /* SceneDelegate.swift */,
+				5C2CF40F236C42C100E7B0CC /* ViewController.swift */,
+				5C2CF411236C42C100E7B0CC /* Main.storyboard */,
+				5C2CF414236C42C200E7B0CC /* Assets.xcassets */,
+				5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */,
+				5C2CF419236C42C200E7B0CC /* Info.plist */,
+			);
+			path = FoursquareMap;
+			sourceTree = "<group>";
+		};
+		5C2CF421236C42C200E7B0CC /* FoursquareMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF422236C42C200E7B0CC /* FoursquareMapTests.swift */,
+				5C2CF424236C42C200E7B0CC /* Info.plist */,
+			);
+			path = FoursquareMapTests;
+			sourceTree = "<group>";
+		};
+		5C2CF42C236C42C200E7B0CC /* FoursquareMapUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C2CF42D236C42C200E7B0CC /* FoursquareMapUITests.swift */,
+				5C2CF42F236C42C200E7B0CC /* Info.plist */,
+			);
+			path = FoursquareMapUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C2CF407236C42C100E7B0CC /* FoursquareMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2CF432236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMap" */;
+			buildPhases = (
+				5C2CF404236C42C100E7B0CC /* Sources */,
+				5C2CF405236C42C100E7B0CC /* Frameworks */,
+				5C2CF406236C42C100E7B0CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoursquareMap;
+			productName = FoursquareMap;
+			productReference = 5C2CF408236C42C100E7B0CC /* FoursquareMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C2CF41D236C42C200E7B0CC /* FoursquareMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2CF435236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMapTests" */;
+			buildPhases = (
+				5C2CF41A236C42C200E7B0CC /* Sources */,
+				5C2CF41B236C42C200E7B0CC /* Frameworks */,
+				5C2CF41C236C42C200E7B0CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C2CF420236C42C200E7B0CC /* PBXTargetDependency */,
+			);
+			name = FoursquareMapTests;
+			productName = FoursquareMapTests;
+			productReference = 5C2CF41E236C42C200E7B0CC /* FoursquareMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C2CF428236C42C200E7B0CC /* FoursquareMapUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2CF438236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMapUITests" */;
+			buildPhases = (
+				5C2CF425236C42C200E7B0CC /* Sources */,
+				5C2CF426236C42C200E7B0CC /* Frameworks */,
+				5C2CF427236C42C200E7B0CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C2CF42B236C42C200E7B0CC /* PBXTargetDependency */,
+			);
+			name = FoursquareMapUITests;
+			productName = FoursquareMapUITests;
+			productReference = 5C2CF429236C42C200E7B0CC /* FoursquareMapUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C2CF400236C42C100E7B0CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Mohamed Hassan";
+				TargetAttributes = {
+					5C2CF407236C42C100E7B0CC = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					5C2CF41D236C42C200E7B0CC = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 5C2CF407236C42C100E7B0CC;
+					};
+					5C2CF428236C42C200E7B0CC = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 5C2CF407236C42C100E7B0CC;
+					};
+				};
+			};
+			buildConfigurationList = 5C2CF403236C42C100E7B0CC /* Build configuration list for PBXProject "FoursquareMap" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C2CF3FF236C42C100E7B0CC;
+			productRefGroup = 5C2CF409236C42C100E7B0CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C2CF407236C42C100E7B0CC /* FoursquareMap */,
+				5C2CF41D236C42C200E7B0CC /* FoursquareMapTests */,
+				5C2CF428236C42C200E7B0CC /* FoursquareMapUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C2CF406236C42C100E7B0CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2CF418236C42C200E7B0CC /* LaunchScreen.storyboard in Resources */,
+				5C2CF415236C42C200E7B0CC /* Assets.xcassets in Resources */,
+				5C2CF413236C42C100E7B0CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF41C236C42C200E7B0CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF427236C42C200E7B0CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C2CF404236C42C100E7B0CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */,
+				5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */,
+				5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF41A236C42C200E7B0CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2CF423236C42C200E7B0CC /* FoursquareMapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C2CF425236C42C200E7B0CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C2CF420236C42C200E7B0CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C2CF407236C42C100E7B0CC /* FoursquareMap */;
+			targetProxy = 5C2CF41F236C42C200E7B0CC /* PBXContainerItemProxy */;
+		};
+		5C2CF42B236C42C200E7B0CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C2CF407236C42C100E7B0CC /* FoursquareMap */;
+			targetProxy = 5C2CF42A236C42C200E7B0CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C2CF411236C42C100E7B0CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2CF412236C42C100E7B0CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2CF417236C42C200E7B0CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C2CF430236C42C200E7B0CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5C2CF431236C42C200E7B0CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C2CF433236C42C200E7B0CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C2CF434236C42C200E7B0CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C2CF436236C42C200E7B0CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoursquareMap.app/FoursquareMap";
+			};
+			name = Debug;
+		};
+		5C2CF437236C42C200E7B0CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMapTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMapTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoursquareMap.app/FoursquareMap";
+			};
+			name = Release;
+		};
+		5C2CF439236C42C200E7B0CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoursquareMap;
+			};
+			name = Debug;
+		};
+		5C2CF43A236C42C200E7B0CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FoursquareMapUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dott.task.FoursquareMapUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FoursquareMap;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C2CF403236C42C100E7B0CC /* Build configuration list for PBXProject "FoursquareMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2CF430236C42C200E7B0CC /* Debug */,
+				5C2CF431236C42C200E7B0CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C2CF432236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2CF433236C42C200E7B0CC /* Debug */,
+				5C2CF434236C42C200E7B0CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C2CF435236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2CF436236C42C200E7B0CC /* Debug */,
+				5C2CF437236C42C200E7B0CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C2CF438236C42C200E7B0CC /* Build configuration list for PBXNativeTarget "FoursquareMapUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2CF439236C42C200E7B0CC /* Debug */,
+				5C2CF43A236C42C200E7B0CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C2CF400236C42C100E7B0CC /* Project object */;
+}
