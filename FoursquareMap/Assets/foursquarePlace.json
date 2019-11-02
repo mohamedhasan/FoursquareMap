@@ -1,0 +1,29 @@
+{
+"id": "5b9f8c9833e118002c53aa87",
+"name": "The Shops & Restaurants at Hudson Yards",
+"contact": {},
+"location": {
+"address": "20 Hudson Yards",
+"lat": 40.75368434864726,
+"lng": -74.00195360183716,
+"labeledLatLngs": [
+{
+"label": "display",
+"lat": 40.75368434864726,
+"lng": -74.00195360183716
+}
+],
+"distance": 1474,
+"postalCode": "10001",
+"cc": "US",
+"neighborhood": "Hudson Yards",
+"city": "New York",
+"state": "NY",
+"country": "United States",
+"formattedAddress": [
+"20 Hudson Yards",
+"New York, NY 10001",
+"United States"
+]
+}
+}
