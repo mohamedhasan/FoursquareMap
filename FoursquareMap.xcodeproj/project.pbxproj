@@ -42,6 +42,10 @@
 		5C2CF46A236D8F7300E7B0CC /* foursquarePlace.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */; };
 		5C2CF46C236D8FEB00E7B0CC /* foursquareResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */; };
 		5C2CF470236D938300E7B0CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF455236C7C1A00E7B0CC /* NetworkManager.swift */; };
+		5CC8217E236DA21000FF5B80 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */; };
+		5CC8217F236DA21000FF5B80 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */; };
+		5CC82180236DA21000FF5B80 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */; };
+		5CF1B39C236DA83C00CF382A /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */; };
 		8BA8AACD680435E5064ACCAE /* Pods_FoursquareMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */; };
 		DFEC927BED654AB3E6FBE104 /* Pods_FoursquareMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */; };
 		F8EDBCBC52ABED03D191A061 /* Pods_FoursquareMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC3B2E10E8B2AD0324BCC2 /* Pods_FoursquareMap.framework */; };
@@ -94,6 +98,8 @@
 		5C2CF467236D8D6A00E7B0CC /* FourSquareModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareModelTest.swift; sourceTree = "<group>"; };
 		5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foursquarePlace.json; sourceTree = "<group>"; };
 		5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foursquareResponse.json; sourceTree = "<group>"; };
+		5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		692B2EACE5CF8210E888FE64 /* Pods-FoursquareMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareMapTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquareMapTests/Pods-FoursquareMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,12 +218,12 @@
 		5C2CF43B236C59CC00E7B0CC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */,
-				5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */,
 				5C2CF411236C42C100E7B0CC /* Main.storyboard */,
 				5C2CF414236C42C200E7B0CC /* Assets.xcassets */,
 				5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */,
 				5C2CF419236C42C200E7B0CC /* Info.plist */,
+				5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */,
+				5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				5C2CF442236C6B1400E7B0CC /* Network */,
+				5CF1B39A236DA81800CF382A /* Utilities */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 		5C2CF43E236C5A5D00E7B0CC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -297,6 +305,14 @@
 				5C2CF465236D8C3100E7B0CC /* FourSquareResponseModelTest.swift */,
 			);
 			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		5CF1B39A236DA81800CF382A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -524,7 +540,9 @@
 			files = (
 				5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */,
 				5C2CF456236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
+				5CF1B39C236DA83C00CF382A /* UIColor+Custom.swift in Sources */,
 				5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */,
+				5CC8217E236DA21000FF5B80 /* PlaceViewModel.swift in Sources */,
 				5C2CF470236D938300E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF45E236C875A00E7B0CC /* PlacesApi.swift in Sources */,
 				5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */,
@@ -546,6 +564,7 @@
 				5C2CF45A236C7C1A00E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF463236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */,
 				5C2CF45F236C875A00E7B0CC /* PlacesApi.swift in Sources */,
+				5CC8217F236DA21000FF5B80 /* PlaceViewModel.swift in Sources */,
 				5C2CF457236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
 				5C2CF466236D8C3100E7B0CC /* FourSquareResponseModelTest.swift in Sources */,
 				5C2CF423236C42C200E7B0CC /* FoursquareMapTests.swift in Sources */,
@@ -564,6 +583,7 @@
 				5C2CF464236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */,
 				5C2CF460236C875A00E7B0CC /* PlacesApi.swift in Sources */,
 				5C2CF458236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
+				5CC82180236DA21000FF5B80 /* PlaceViewModel.swift in Sources */,
 				5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */,
 				5C2CF446236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
 			);
