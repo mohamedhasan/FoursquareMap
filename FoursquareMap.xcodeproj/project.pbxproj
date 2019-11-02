@@ -46,6 +46,8 @@
 		5CC8217F236DA21000FF5B80 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */; };
 		5CC82180236DA21000FF5B80 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */; };
 		5CF1B39C236DA83C00CF382A /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */; };
+		5CF1B39E236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */; };
+		5CF1B39F236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */; };
 		8BA8AACD680435E5064ACCAE /* Pods_FoursquareMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */; };
 		DFEC927BED654AB3E6FBE104 /* Pods_FoursquareMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */; };
 		F8EDBCBC52ABED03D191A061 /* Pods_FoursquareMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FDC3B2E10E8B2AD0324BCC2 /* Pods_FoursquareMap.framework */; };
@@ -100,6 +102,7 @@
 		5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foursquareResponse.json; sourceTree = "<group>"; };
 		5CC8217D236DA21000FF5B80 /* PlaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		692B2EACE5CF8210E888FE64 /* Pods-FoursquareMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareMapTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquareMapTests/Pods-FoursquareMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CE6F49CBDA619A7523947CA /* Pods_FoursquareMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3D7D3B89B6F315F1F05177 /* Pods_FoursquareMapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquareMapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +259,7 @@
 		5C2CF440236C5DF000E7B0CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -550,6 +554,7 @@
 				5C2CF451236C785F00E7B0CC /* FoursquarePlace.swift in Sources */,
 				5C2CF448236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF444236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
+				5CF1B39E236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +584,7 @@
 				5C2CF453236C785F00E7B0CC /* FoursquarePlace.swift in Sources */,
 				5C2CF44A236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF44F236C77C600E7B0CC /* PlaceProtocol.swift in Sources */,
+				5CF1B39F236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */,
 				5C2CF45B236C7C1A00E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF464236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */,
 				5C2CF460236C875A00E7B0CC /* PlacesApi.swift in Sources */,

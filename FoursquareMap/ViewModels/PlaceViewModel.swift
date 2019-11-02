@@ -37,4 +37,18 @@ extension PlaceViewModel: MKAnnotation {
     public var subtitle: String? {
         return model.address
     }
+    
+    func annotationView() -> MKAnnotationView {
+        let annotationView = MKAnnotationView(annotation: self, reuseIdentifier: self.pinIdentifier())
+        annotationView.image = self.mapPin()
+        annotationView.canShowCallout = true
+        annotationView.clusteringIdentifier = "cluster"
+        
+        let btn = UIButton(type: .custom)
+        btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btn.setImage(UIImage(named: "more"), for: .normal)
+        annotationView.rightCalloutAccessoryView = btn
+        
+        return annotationView
+    }
 }
