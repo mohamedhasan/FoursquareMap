@@ -26,7 +26,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
 
     @objc func showInstructions() {
-        
+        let title = NSLocalizedString("Welcome!", comment: "")
+        let message = NSLocalizedString("Navigate through the map to find your favourite places to eat!", comment: "")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = NSLocalizedString("Got it", comment: "")
+        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
+        alert.view.tintColor = UIColor.tealishBlue
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func setupMap() {
