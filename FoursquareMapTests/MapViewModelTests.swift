@@ -9,17 +9,13 @@
 import XCTest
 import MapKit
 
-class FourSquareResponseModelTest: XCTestCase {
+class MapViewModelTests: XCTestCase {
 
     var viewModel:MapViewModel?
     
     override func setUp() {
         let dataProvider = NetworkMockingManager(bundle: Bundle(for: type(of: self)))
         viewModel = MapViewModel(dataProvider: dataProvider)
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testLoadPlaces() {
@@ -33,5 +29,11 @@ class FourSquareResponseModelTest: XCTestCase {
         let annotations = viewModel?.getAnnotations()
         XCTAssertNotNil(annotations)
         XCTAssertGreaterThan(annotations?.count ?? 0, 0)
+    }
+    
+    func testGetAnnotationsPerformance() {
+        self.measure {
+            viewModel?.loadPlaces(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+        }
     }
 }
