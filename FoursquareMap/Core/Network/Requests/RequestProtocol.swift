@@ -12,6 +12,7 @@ import Alamofire
 protocol RequestPathProtocol {
     var path: String { get }
     var method : HTTPMethod { get }
+    var mockName: String { get }
 }
 
 protocol RequestProtocol:NSObject {

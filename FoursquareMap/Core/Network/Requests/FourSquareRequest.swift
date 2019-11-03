@@ -25,6 +25,13 @@ enum FourSquareRequestPath:RequestPathProtocol {
             return "venues/search"
         }
     }
+    
+    var mockName: String {
+        switch self {
+        case .search:
+            return "foursquareResponse"
+        }
+    }
 }
 
 class FourSquareRequest: BaseRequest {

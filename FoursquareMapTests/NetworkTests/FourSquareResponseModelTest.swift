@@ -7,37 +7,31 @@
 //
 
 import XCTest
+import MapKit
 
 class FourSquareResponseModelTest: XCTestCase {
 
-    var responseMock:FoursquareResponse?
+    var viewModel:MapViewModel?
+    
     override func setUp() {
-        if let path = Bundle(for: type(of: self)).path(forResource: "foursquareResponse", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let decoder = JSONDecoder()
-                responseMock = try decoder.decode(FoursquareResponse.self, from: data)
-            }
-            catch {
-                assert(false)
-            }
-        }
+        let dataProvider = NetworkMockingManager(bundle: Bundle(for: type(of: self)))
+        viewModel = MapViewModel(dataProvider: dataProvider)
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testIsSuccess() {
-        XCTAssert(responseMock?.isSuccess ?? false)
-    }
-    
-    func testHasPlaces() {
-        XCTAssertGreaterThan(responseMock?.data.count ?? 0 ,0)
+    func testLoadPlaces() {
+        viewModel?.loadPlaces(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+        let data = viewModel?.model
+        XCTAssertNotNil(data)
     }
 
-    func testHasAddress() {
-        XCTAssertNil(responseMock?.error)
+    func testGetAnnotations() {
+        viewModel?.loadPlaces(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
+        let annotations = viewModel?.getAnnotations()
+        XCTAssertNotNil(annotations)
+        XCTAssertGreaterThan(annotations?.count ?? 0, 0)
     }
-
 }

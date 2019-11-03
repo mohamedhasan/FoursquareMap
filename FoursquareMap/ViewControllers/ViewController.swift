@@ -9,30 +9,24 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController,UIGestureRecognizerDelegate {
+class ViewController: BaseViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet public weak var mapView: MKMapView!
     var dataSource:[Place]?
+    var viewModel:MapViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
+        setupMap()
+        setupModelView()
+    }
+
+    private func setupNavBar() {
         self.navigationController?.navigationBar.backgroundColor = UIColor.tealishBlue
-        
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "help"), style: .plain, target: self, action: #selector(showInstructions))
         rightBarItem.tintColor = .black
         navigationItem.rightBarButtonItem = rightBarItem
-        
-        setupMap()
-    }
-
-    @objc func showInstructions() {
-        let title = NSLocalizedString("Welcome!", comment: "")
-        let message = NSLocalizedString("Navigate through the map to find your favourite places to eat!", comment: "")
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancel = NSLocalizedString("Got it", comment: "")
-        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
-        alert.view.tintColor = UIColor.tealishBlue
-        self.present(alert, animated: true, completion: nil)
     }
     
     private func setupMap() {
@@ -43,8 +37,23 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         registerAnnotationViewClasses()
     }
     
+    private func setupModelView() {
+        viewModel = MapViewModel(dataProvider:NetworkManager.sharedInstance)
+        viewModel?.delegate = self
+    }
+    
+    @objc func showInstructions() {
+        let title = NSLocalizedString("Welcome!", comment: "")
+        let message = NSLocalizedString("Navigate through the map to find your favourite places to eat!", comment: "")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancel = NSLocalizedString("Got it", comment: "")
+        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
+        alert.view.tintColor = UIColor.tealishBlue
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     private func registerAnnotationViewClasses() {
-        mapView.register(PlaceViewModel.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(MapViewModel.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
     
@@ -64,44 +73,18 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     private func loadPlaces() {
-        
-        let center = mapView.centerCoordinate
-        mapView.removeAnnotations(mapView.annotations)
-        PlacesApi.shared.searchPlaces(source: .foursquare, lat: center.latitude, lng: center.longitude, completion: { (response) in
-            if let searchResponse = response {
-                if searchResponse.isSuccess {
-                    self.addAnnotations(for: searchResponse.data)
-                } else {
-                    self.presentError(error: .other)
-                }
-            } else {
-                self.presentError(error: .other)
-            }
-        }) { (error) in
-            self.presentError(error: error)
-        }
+        viewModel?.loadPlaces(coordinate: mapView.centerCoordinate)
     }
 }
 
 extension ViewController: MKMapViewDelegate {
     
-    private func addAnnotations(for places:[Place]) {
-        
-        self.dataSource = places
-        var annotations = [MKAnnotation]()
-        for car in places {
-            let annotation = PlaceViewModel(model: car)
-            annotations.append(annotation)
-        }
-        mapView.addAnnotations(annotations)
-    }
-    
     public func mapView(_ mapView: MKMapView,
                         viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let viewModel = annotation as? PlaceViewModel else {
+        guard let mapAnnotation = annotation as? MapAnnotation else {
             return nil
         }
-        return viewModel.annotationView()
+        return mapAnnotation.annotationView()
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -110,13 +93,17 @@ extension ViewController: MKMapViewDelegate {
     }
 }
 
-extension ViewController {
-    func presentError(error:NetworkError) {
-        let title = NSLocalizedString("Error", comment: "")
-        let message = error.localizedDescription
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let cancel = NSLocalizedString("cancel", comment: "")
-        alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+extension ViewController:PlacesViewerProtocol {
+    func showPlaces(_ places: [Place]) {
+        if let annotations = viewModel?.getAnnotations() {
+            if annotations.count > 0 {
+                mapView.removeAnnotations(mapView.annotations)
+            }
+            mapView.addAnnotations(annotations)
+        }
+    }
+    
+    func showError(_ error: NetworkError) {
+        presentError(error)
     }
 }

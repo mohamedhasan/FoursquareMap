@@ -18,7 +18,7 @@ class FourSquareModelTest: XCTestCase {
                 guard let json = try? JSONSerialization.jsonObject(with: data, options:[]) else {
                     assert(false)
                 }
-                modelMock = try NetworkManager.sharedInstance.parseResponse(json: json, type: FoursquarePlace.self)
+                modelMock = try JsonParser.parseResponse(json: json, type: FoursquarePlace.self)
             }
             catch {
                 assert(false)
