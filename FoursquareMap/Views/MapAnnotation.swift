@@ -20,9 +20,11 @@ class MapAnnotation:NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2DMake(place.lat, place.lng)
     }
+    
     public var title: String? {
         return place.title
     }
+    
     public var subtitle: String? {
         return place.address
     }
@@ -33,10 +35,10 @@ class MapAnnotation:NSObject, MKAnnotation {
         annotationView.canShowCallout = true
         annotationView.clusteringIdentifier = "cluster"
         
-        let btn = UIButton(type: .custom)
-        btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        btn.setImage(calloutImage(), for: .normal)
-        annotationView.rightCalloutAccessoryView = btn
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        button.setImage(calloutImage(), for: .normal)
+        annotationView.rightCalloutAccessoryView = button
         
         return annotationView
     }
