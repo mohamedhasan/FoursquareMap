@@ -10,7 +10,6 @@
         <!--Navigation Controller-->
         <scene sceneID="RnC-1Y-m43">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nVM-gu-Dgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Dj3-NG-p1D" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="N9o-Q5-9vV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -21,13 +20,14 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="l6R-ds-BVi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVM-gu-Dgi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-771" y="90"/>
         </scene>
         <!--Eat Around-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Eat Around" id="BYZ-38-t0r" customClass="ViewController" customModule="FoursquareMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Eat Around" id="BYZ-38-t0r" customClass="MapViewController" customModule="FoursquareMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

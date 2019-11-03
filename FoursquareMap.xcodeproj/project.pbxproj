@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40B236C42C100E7B0CC /* AppDelegate.swift */; };
 		5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40D236C42C100E7B0CC /* SceneDelegate.swift */; };
-		5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40F236C42C100E7B0CC /* ViewController.swift */; };
+		5C2CF410236C42C100E7B0CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF40F236C42C100E7B0CC /* MapViewController.swift */; };
 		5C2CF413236C42C100E7B0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF411236C42C100E7B0CC /* Main.storyboard */; };
 		5C2CF415236C42C200E7B0CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF414236C42C200E7B0CC /* Assets.xcassets */; };
 		5C2CF418236C42C200E7B0CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF416236C42C200E7B0CC /* LaunchScreen.storyboard */; };
@@ -33,7 +33,7 @@
 		5C2CF45B236C7C1A00E7B0CC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF455236C7C1A00E7B0CC /* NetworkManager.swift */; };
 		5C2CF463236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF461236CF2C100E7B0CC /* FourSquareRequestTest.swift */; };
 		5C2CF464236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF461236CF2C100E7B0CC /* FourSquareRequestTest.swift */; };
-		5C2CF466236D8C3100E7B0CC /* MapViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF465236D8C3100E7B0CC /* MapViewModelTests.swift */; };
+		5C2CF466236D8C3100E7B0CC /* MapViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF465236D8C3100E7B0CC /* MapViewPresenterTests.swift */; };
 		5C2CF468236D8D6A00E7B0CC /* FourSquareModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2CF467236D8D6A00E7B0CC /* FourSquareModelTest.swift */; };
 		5C2CF46A236D8F7300E7B0CC /* foursquarePlace.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */; };
 		5C2CF46C236D8FEB00E7B0CC /* foursquareResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */; };
@@ -57,14 +57,13 @@
 		5C7F88EC236F697000A85123 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88EA236F697000A85123 /* DataProviderProtocol.swift */; };
 		5C7F88ED236F697000A85123 /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88EA236F697000A85123 /* DataProviderProtocol.swift */; };
 		5C7F88F0236F69C700A85123 /* NetworkMockingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */; };
-		5C7F88F1236F69C700A85123 /* NetworkMockingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */; };
-		5C7F88F2236F6B3D00A85123 /* NetworkMockingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */; };
-		5C7F88F4236F6FC500A85123 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* BaseViewController.swift */; };
-		5C7F88F5236F6FC500A85123 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* BaseViewController.swift */; };
-		5C7F88F6236F6FC500A85123 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* BaseViewController.swift */; };
-		5CC8217E236DA21000FF5B80 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewModel.swift */; };
-		5CC8217F236DA21000FF5B80 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewModel.swift */; };
-		5CC82180236DA21000FF5B80 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewModel.swift */; };
+		5C7F88F4236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* UIViewController+ErrorHandling.swift */; };
+		5C7F88F5236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* UIViewController+ErrorHandling.swift */; };
+		5C7F88F6236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88F3236F6FC500A85123 /* UIViewController+ErrorHandling.swift */; };
+		5C7F88FC236F8E3C00A85123 /* MapViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F88FB236F8E3C00A85123 /* MapViewMock.swift */; };
+		5CC8217E236DA21000FF5B80 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewPresenter.swift */; };
+		5CC8217F236DA21000FF5B80 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewPresenter.swift */; };
+		5CC82180236DA21000FF5B80 /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC8217D236DA21000FF5B80 /* MapViewPresenter.swift */; };
 		5CF1B39C236DA83C00CF382A /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */; };
 		5CF1B39E236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */; };
 		5CF1B39F236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */; };
@@ -97,7 +96,7 @@
 		5C2CF408236C42C100E7B0CC /* FoursquareMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2CF40B236C42C100E7B0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C2CF40D236C42C100E7B0CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C2CF40F236C42C100E7B0CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C2CF40F236C42C100E7B0CC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5C2CF412236C42C100E7B0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C2CF414236C42C200E7B0CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2CF417236C42C200E7B0CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,7 +113,7 @@
 		5C2CF454236C7C1A00E7B0CC /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		5C2CF455236C7C1A00E7B0CC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5C2CF461236CF2C100E7B0CC /* FourSquareRequestTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourSquareRequestTest.swift; sourceTree = "<group>"; };
-		5C2CF465236D8C3100E7B0CC /* MapViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTests.swift; sourceTree = "<group>"; };
+		5C2CF465236D8C3100E7B0CC /* MapViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewPresenterTests.swift; sourceTree = "<group>"; };
 		5C2CF467236D8D6A00E7B0CC /* FourSquareModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareModelTest.swift; sourceTree = "<group>"; };
 		5C2CF469236D8F7300E7B0CC /* foursquarePlace.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foursquarePlace.json; sourceTree = "<group>"; };
 		5C2CF46B236D8FEB00E7B0CC /* foursquareResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = foursquareResponse.json; sourceTree = "<group>"; };
@@ -124,8 +123,9 @@
 		5C48368F236F642E00B4EE3B /* PlacesViewerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewerProtocol.swift; sourceTree = "<group>"; };
 		5C7F88EA236F697000A85123 /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockingManager.swift; sourceTree = "<group>"; };
-		5C7F88F3236F6FC500A85123 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5CC8217D236DA21000FF5B80 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		5C7F88F3236F6FC500A85123 /* UIViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
+		5C7F88FB236F8E3C00A85123 /* MapViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewMock.swift; sourceTree = "<group>"; };
+		5CC8217D236DA21000FF5B80 /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		5CF1B39B236DA83C00CF382A /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		5CF1B39D236DBB4400CF382A /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		692B2EACE5CF8210E888FE64 /* Pods-FoursquareMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareMapTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquareMapTests/Pods-FoursquareMapTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 				5C483682236F42D500B4EE3B /* Interactors */,
 				5C2CF441236C5DF400E7B0CC /* Models */,
 				5C2CF440236C5DF000E7B0CC /* Views */,
-				5C2CF43E236C5A5D00E7B0CC /* ViewModels */,
+				5C2CF43E236C5A5D00E7B0CC /* Presenter */,
 				5C2CF43D236C5A5A00E7B0CC /* ViewControllers */,
 				5C2CF43C236C5A5600E7B0CC /* Core */,
 				5C2CF43B236C59CC00E7B0CC /* Assets */,
@@ -228,7 +228,9 @@
 		5C2CF421236C42C200E7B0CC /* FoursquareMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				5C2CF465236D8C3100E7B0CC /* MapViewModelTests.swift */,
+				5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */,
+				5C7F88FB236F8E3C00A85123 /* MapViewMock.swift */,
+				5C2CF465236D8C3100E7B0CC /* MapViewPresenterTests.swift */,
 				5C2CF471236D988500E7B0CC /* NetworkTests */,
 				5C2CF424236C42C200E7B0CC /* Info.plist */,
 			);
@@ -269,18 +271,18 @@
 		5C2CF43D236C5A5A00E7B0CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C7F88F3236F6FC500A85123 /* BaseViewController.swift */,
-				5C2CF40F236C42C100E7B0CC /* ViewController.swift */,
+				5C7F88F3236F6FC500A85123 /* UIViewController+ErrorHandling.swift */,
+				5C2CF40F236C42C100E7B0CC /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		5C2CF43E236C5A5D00E7B0CC /* ViewModels */ = {
+		5C2CF43E236C5A5D00E7B0CC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				5CC8217D236DA21000FF5B80 /* MapViewModel.swift */,
+				5CC8217D236DA21000FF5B80 /* MapViewPresenter.swift */,
 			);
-			path = ViewModels;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		5C2CF440236C5DF000E7B0CC /* Views */ = {
@@ -308,7 +310,6 @@
 				5C2CF454236C7C1A00E7B0CC /* NetworkError.swift */,
 				5C7F88EA236F697000A85123 /* DataProviderProtocol.swift */,
 				5C2CF455236C7C1A00E7B0CC /* NetworkManager.swift */,
-				5C7F88EE236F69C700A85123 /* NetworkMockingManager.swift */,
 				5C483687236F499E00B4EE3B /* JsonParser.swift */,
 				5C2CF44B236C776F00E7B0CC /* Requests */,
 			);
@@ -572,13 +573,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C2CF410236C42C100E7B0CC /* ViewController.swift in Sources */,
+				5C2CF410236C42C100E7B0CC /* MapViewController.swift in Sources */,
 				5C483690236F642E00B4EE3B /* PlacesViewerProtocol.swift in Sources */,
 				5C2CF456236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
 				5CF1B39C236DA83C00CF382A /* UIColor+Custom.swift in Sources */,
-				5C7F88F4236F6FC500A85123 /* BaseViewController.swift in Sources */,
+				5C7F88F4236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */,
 				5C2CF40C236C42C100E7B0CC /* AppDelegate.swift in Sources */,
-				5CC8217E236DA21000FF5B80 /* MapViewModel.swift in Sources */,
+				5CC8217E236DA21000FF5B80 /* MapViewPresenter.swift in Sources */,
 				5C2CF470236D938300E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF40E236C42C100E7B0CC /* SceneDelegate.swift in Sources */,
 				5C483684236F42F500B4EE3B /* FoursquarePlaceInteractor.swift in Sources */,
@@ -588,7 +589,6 @@
 				5C7F88EB236F697000A85123 /* DataProviderProtocol.swift in Sources */,
 				5C48368C236F5C7E00B4EE3B /* MapAnnotation.swift in Sources */,
 				5C2CF448236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
-				5C7F88F2236F6B3D00A85123 /* NetworkMockingManager.swift in Sources */,
 				5C2CF444236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,
 				5CF1B39E236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */,
 			);
@@ -603,15 +603,16 @@
 				5C7F88E7236F68F300A85123 /* UIColor+Custom.swift in Sources */,
 				5C2CF452236C785F00E7B0CC /* FoursquarePlace.swift in Sources */,
 				5C7F88EC236F697000A85123 /* DataProviderProtocol.swift in Sources */,
-				5C7F88F5236F6FC500A85123 /* BaseViewController.swift in Sources */,
+				5C7F88F5236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */,
 				5C2CF449236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF44E236C77C600E7B0CC /* PlaceProtocol.swift in Sources */,
 				5C2CF45A236C7C1A00E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF463236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */,
 				5C483685236F42F500B4EE3B /* FoursquarePlaceInteractor.swift in Sources */,
-				5CC8217F236DA21000FF5B80 /* MapViewModel.swift in Sources */,
+				5C7F88FC236F8E3C00A85123 /* MapViewMock.swift in Sources */,
+				5CC8217F236DA21000FF5B80 /* MapViewPresenter.swift in Sources */,
 				5C2CF457236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
-				5C2CF466236D8C3100E7B0CC /* MapViewModelTests.swift in Sources */,
+				5C2CF466236D8C3100E7B0CC /* MapViewPresenterTests.swift in Sources */,
 				5C7F88E9236F690500A85123 /* ClusterAnnotationView.swift in Sources */,
 				5C48368D236F5C7E00B4EE3B /* MapAnnotation.swift in Sources */,
 				5C483689236F499E00B4EE3B /* JsonParser.swift in Sources */,
@@ -629,15 +630,14 @@
 				5C2CF44A236C6BDD00E7B0CC /* FourSquareRequest.swift in Sources */,
 				5C2CF44F236C77C600E7B0CC /* PlaceProtocol.swift in Sources */,
 				5CF1B39F236DBB4400CF382A /* ClusterAnnotationView.swift in Sources */,
-				5C7F88F6236F6FC500A85123 /* BaseViewController.swift in Sources */,
+				5C7F88F6236F6FC500A85123 /* UIViewController+ErrorHandling.swift in Sources */,
 				5C2CF45B236C7C1A00E7B0CC /* NetworkManager.swift in Sources */,
 				5C2CF464236CF2C100E7B0CC /* FourSquareRequestTest.swift in Sources */,
 				5C483692236F642E00B4EE3B /* PlacesViewerProtocol.swift in Sources */,
 				5C7F88E8236F68F400A85123 /* UIColor+Custom.swift in Sources */,
 				5C2CF458236C7C1A00E7B0CC /* NetworkError.swift in Sources */,
 				5C48368E236F5C7E00B4EE3B /* MapAnnotation.swift in Sources */,
-				5C7F88F1236F69C700A85123 /* NetworkMockingManager.swift in Sources */,
-				5CC82180236DA21000FF5B80 /* MapViewModel.swift in Sources */,
+				5CC82180236DA21000FF5B80 /* MapViewPresenter.swift in Sources */,
 				5C7F88ED236F697000A85123 /* DataProviderProtocol.swift in Sources */,
 				5C2CF42E236C42C200E7B0CC /* FoursquareMapUITests.swift in Sources */,
 				5C2CF446236C6B2F00E7B0CC /* RequestProtocol.swift in Sources */,

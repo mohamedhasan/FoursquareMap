@@ -9,17 +9,19 @@
 import UIKit
 import MapKit
 
-class ViewController: BaseViewController, UIGestureRecognizerDelegate {
+class MapViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet public weak var mapView: MKMapView!
-    var dataSource:[Place]?
-    var viewModel:MapViewModel?
+    lazy var presenter:MapViewPresenter = {
+        let presenter = MapViewPresenter(dataProvider:NetworkManager.sharedInstance)
+        presenter.delegate = self
+        return presenter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupMap()
-        setupModelView()
     }
 
     private func setupNavBar() {
@@ -37,11 +39,6 @@ class ViewController: BaseViewController, UIGestureRecognizerDelegate {
         registerAnnotationViewClasses()
     }
     
-    private func setupModelView() {
-        viewModel = MapViewModel(dataProvider:NetworkManager.sharedInstance)
-        viewModel?.delegate = self
-    }
-    
     @objc func showInstructions() {
         let title = NSLocalizedString("Welcome!", comment: "")
         let message = NSLocalizedString("Navigate through the map to find your favourite places to eat!", comment: "")
@@ -53,7 +50,7 @@ class ViewController: BaseViewController, UIGestureRecognizerDelegate {
     }
     
     private func registerAnnotationViewClasses() {
-        mapView.register(MapViewModel.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.register(MapViewPresenter.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         mapView.register(ClusterAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
     }
     
@@ -73,11 +70,11 @@ class ViewController: BaseViewController, UIGestureRecognizerDelegate {
     }
     
     private func loadPlaces() {
-        viewModel?.loadPlaces(coordinate: mapView.centerCoordinate)
+        presenter.loadPlaces(coordinate: mapView.centerCoordinate)
     }
 }
 
-extension ViewController: MKMapViewDelegate {
+extension MapViewController: MKMapViewDelegate {
     
     public func mapView(_ mapView: MKMapView,
                         viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -93,14 +90,12 @@ extension ViewController: MKMapViewDelegate {
     }
 }
 
-extension ViewController:PlacesViewerProtocol {
-    func showPlaces(_ places: [Place]) {
-        if let annotations = viewModel?.getAnnotations() {
-            if annotations.count > 0 {
-                mapView.removeAnnotations(mapView.annotations)
-            }
-            mapView.addAnnotations(annotations)
+extension MapViewController:PlacesViewerProtocol {
+    func showAnnotations(_ annotations:[MKAnnotation]) {
+        if annotations.count > 0 {
+            mapView.removeAnnotations(mapView.annotations)
         }
+        mapView.addAnnotations(annotations)
     }
     
     func showError(_ error: NetworkError) {

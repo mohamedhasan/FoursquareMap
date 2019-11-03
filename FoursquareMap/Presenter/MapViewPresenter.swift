@@ -1,5 +1,5 @@
 //
-//  PlaceViewModel.swift
+//  MapViewPresenter.swift
 //  FoursquareMap
 //
 //  Created by Mohamed Hassan on 11/1/19.
@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewModel: NSObject {
+class MapViewPresenter: NSObject {
 
     var model:[Place]
     lazy private var interactor:FoursquarePlaceInteractor? = { return interactorInstance() }()
@@ -25,7 +25,7 @@ class MapViewModel: NSObject {
     private func interactorInstance() -> FoursquarePlaceInteractor {
         return FoursquarePlaceInteractor(dataProvider:dataProvider, onSuccess: { (places) in
             self.model = places
-            self.delegate?.showPlaces(places)
+            self.delegate?.showAnnotations(self.getAnnotations())
         }, onFailure: { (error) in
             self.delegate?.showError(error)
         })
@@ -35,7 +35,7 @@ class MapViewModel: NSObject {
         interactor?.fetchPlaces(coordinate: coordinate)
     }
     
-    public func getAnnotations() -> [MKAnnotation] {
+    private func getAnnotations() -> [MKAnnotation] {
         var annotations = [MKAnnotation]()
         for place in model {
             let annotation = MapAnnotation(place: place)

@@ -1,6 +1,6 @@
 //
 //  BaseViewController.swift
-//  FoursquareMap
+//  UIViewController+ErrorHandling
 //
 //  Created by Mohamed Hassan on 11/3/19.
 //  Copyright © 2019 Mohamed Hassan. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+extension UIViewController {
 
     func presentError(_ error:NetworkError) {
         let title = NSLocalizedString("Error", comment: "")

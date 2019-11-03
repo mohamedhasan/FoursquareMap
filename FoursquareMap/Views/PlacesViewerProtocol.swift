@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
 protocol PlacesViewerProtocol:NSObject {
-    func showPlaces(_ places:[Place])
+    func showAnnotations(_ annotations:[MKAnnotation])
     func showError(_ error:NetworkError)
 }

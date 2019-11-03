@@ -11,6 +11,7 @@ import UIKit
 class NetworkMockingManager: DataProvider {
 
     let bundle:Bundle!
+    var showError = false
     
     init(bundle:Bundle) {
         self.bundle = bundle
@@ -18,6 +19,10 @@ class NetworkMockingManager: DataProvider {
     
     func perfromRequest <T:Codable>(request:RequestProtocol, of type: T.Type, completion: @escaping (T?) -> Void,errorHandler: @escaping (NetworkError) -> Void) {
         
+        if showError {
+            errorHandler(.other)
+            return
+        }
         let mockName = request.path.mockName
         if let path = bundle.path(forResource: mockName, ofType: "json") {
         do {
@@ -27,7 +32,7 @@ class NetworkMockingManager: DataProvider {
             completion(responseMock)
         }
         catch {
-            assert(false)
+            errorHandler(.other)
             }
         }
 
