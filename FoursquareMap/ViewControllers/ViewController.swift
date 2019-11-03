@@ -104,14 +104,14 @@ extension ViewController: MKMapViewDelegate {
         return viewModel.annotationView()
     }
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
         
     }
 }
 
 extension ViewController {
     func presentError(error:NetworkError) {
-        
         let title = NSLocalizedString("Error", comment: "")
         let message = error.localizedDescription
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
