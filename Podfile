@@ -7,7 +7,6 @@ target 'FoursquareMap' do
 
   # Pods for FoursquareMap
   pod 'Alamofire'
-  pod 'SDWebImage'
 
   target 'FoursquareMapTests' do
     inherit! :search_paths
