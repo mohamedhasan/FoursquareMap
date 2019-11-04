@@ -1,5 +1,5 @@
 //
-//  PlacesViewerProtocol.swift
+//  MapViewerProtocol.swift
 //  FoursquareMap
 //
 //  Created by Mohamed Hassan on 11/3/19.
@@ -9,7 +9,8 @@
 import UIKit
 import MapKit
 
-protocol PlacesViewerProtocol:NSObject {
+protocol MapViewerProtocol:NSObject {
     func showAnnotations(_ annotations:[MKAnnotation])
     func showError(_ error:NetworkError)
+    func setupView()
 }

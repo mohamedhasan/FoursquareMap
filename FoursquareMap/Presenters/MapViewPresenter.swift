@@ -11,28 +11,28 @@ import MapKit
 
 class MapViewPresenter: NSObject {
 
-    var model:[Place]
-    lazy private var interactor:FoursquarePlaceInteractor? = { return interactorInstance() }()
+    private var model:[Place]
+    private var interactor:FoursquarePlaceInteractor
+    weak var delegate:MapViewerProtocol? { didSet { setup() }}
     
-    private let dataProvider:DataProvider
-    weak var delegate:PlacesViewerProtocol?
+    private func setup() {
+        delegate?.setupView()
+        interactor.completionHandler =  { (places) in
+            self.model = places
+            self.delegate?.showAnnotations(self.getAnnotations())
+        }
+        interactor.errorHandler = { (error) in
+            self.delegate?.showError(error)
+        }
+    }
     
     public init(dataProvider:DataProvider) {
         self.model = [Place]()
-        self.dataProvider = dataProvider
-    }
-    
-    private func interactorInstance() -> FoursquarePlaceInteractor {
-        return FoursquarePlaceInteractor(dataProvider:dataProvider, onSuccess: { (places) in
-            self.model = places
-            self.delegate?.showAnnotations(self.getAnnotations())
-        }, onFailure: { (error) in
-            self.delegate?.showError(error)
-        })
+        self.interactor = FoursquarePlaceInteractor(dataProvider:dataProvider)
     }
     
     public func loadPlaces(coordinate:CLLocationCoordinate2D) {
-        interactor?.fetchPlaces(coordinate: coordinate)
+        interactor.fetchPlaces(coordinate: coordinate)
     }
     
     private func getAnnotations() -> [MKAnnotation] {

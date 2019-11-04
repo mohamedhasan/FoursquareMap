@@ -20,10 +20,13 @@ class MapViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func setupView() {
         setupNavBar()
         setupMap()
     }
-
+    
     private func setupNavBar() {
         self.navigationController?.navigationBar.backgroundColor = UIColor.tealishBlue
         let rightBarItem = UIBarButtonItem(image: UIImage(named: "help"), style: .plain, target: self, action: #selector(showInstructions))
@@ -86,11 +89,18 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        
+        guard let mapAnnotation = view.annotation as? MapAnnotation else {
+            return
+        }
+        if let detailsViewController = storyboard?.instantiateViewController(identifier: "DetailsViewController") as? DetailsViewController {
+            let presenter = DetailsViewPresenter(dataProvider: NetworkManager.sharedInstance, place: mapAnnotation.place)
+            detailsViewController.presenter = presenter
+            present(detailsViewController, animated: true, completion: nil)
+        }
     }
 }
 
-extension MapViewController:PlacesViewerProtocol {
+extension MapViewController:MapViewerProtocol {
     func showAnnotations(_ annotations:[MKAnnotation]) {
         if annotations.count > 0 {
             mapView.removeAnnotations(mapView.annotations)

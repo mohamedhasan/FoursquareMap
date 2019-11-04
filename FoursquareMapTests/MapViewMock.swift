@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewMock: NSObject,PlacesViewerProtocol {
+class MapViewMock: NSObject,MapViewerProtocol {
     
     public var mockedAnnotations:[MKAnnotation]?
     public var mockedError:NetworkError?
@@ -21,4 +21,8 @@ class MapViewMock: NSObject,PlacesViewerProtocol {
     func showError(_ error: NetworkError) {
         self.mockedError = error
     }
+}
+
+extension MapViewMock {
+    func setupView() {}
 }

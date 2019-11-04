@@ -20,12 +20,6 @@ class MapViewPresenterTests: XCTestCase {
         presenter?.delegate = view
     }
 
-    func testLoadPlaces() {
-        presenter?.loadPlaces(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
-        let data = presenter?.model
-        XCTAssertNotNil(data)
-    }
-
     func testGetAnnotations() {
         presenter?.loadPlaces(coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))
         let annotations = view.mockedAnnotations

@@ -11,10 +11,13 @@ import Alamofire
 
 enum FourSquareRequestPath:RequestPathProtocol {
     case search
+    case details
     
     var method: HTTPMethod {
         switch self {
         case .search:
+            return .get
+        case .details:
             return .get
         }
     }
@@ -23,6 +26,8 @@ enum FourSquareRequestPath:RequestPathProtocol {
         switch self {
         case .search:
             return "venues/search"
+        case .details:
+            return "venues"
         }
     }
     
@@ -30,6 +35,8 @@ enum FourSquareRequestPath:RequestPathProtocol {
         switch self {
         case .search:
             return "foursquareResponse"
+        case .details:
+            return "placeModel"
         }
     }
 }
@@ -60,4 +67,14 @@ class FourSquareRequest: BaseRequest {
         return FourSquareRequest(path: .search, paramters: ["ll":latLng,"query":query])
     }
 
+    override func requestUrl() -> String! {
+        var url = super.requestUrl()
+        let requestPath = self.path as! FourSquareRequestPath
+        if requestPath == .details {
+            if let id = paramters?["id"] as? String {
+                url = url! + "/" + id
+            }
+        }
+        return url
+    }
 }

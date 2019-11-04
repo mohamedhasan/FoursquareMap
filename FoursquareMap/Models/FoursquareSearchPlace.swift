@@ -11,10 +11,10 @@ import UIKit
 struct FoursquarePlaceContact: Codable {
     let phone:String!
     let formattedPhone:String!
-    let twitter:String!
-    let instagram:String!
-    let facebook:String!
-    let facebookUsername:String!
+    let twitter:String?
+    let instagram:String?
+    let facebook:String?
+    let facebookUsername:String?
 }
 
 struct FoursquarePlaceLocation: Codable {
@@ -33,7 +33,7 @@ struct FoursquareMeta: Codable {
     let requestId:String
 }
 
-class FoursquareResponse: NSObject, ResponseProtocol {
+class FoursquareSearchResponse: NSObject, ResponseProtocol {
     let response:FoursquareObj!
     let meta:FoursquareMeta?
     
@@ -50,8 +50,24 @@ struct FoursquarePlace: Codable {
 }
 
 extension FoursquarePlace:Place {
+    var placeId: String {
+        get { return self.id }
+    }
+    
+    var twitter: String? {
+        get { return self.contact.twitter }
+    }
+    
+    var instagram: String? {
+        get { return self.contact.instagram }
+    }
+    
+    var facebook: String? {
+        get { return self.contact.facebook }
+    }
     var title: String { get {return self.name}}
     var address: String  { get {return self.name}}
     var lat: Double  { get {return self.location.lat}}
     var lng: Double  { get {return self.location.lng}}
+    var phone: String { get {return self.contact.phone}}
 }
